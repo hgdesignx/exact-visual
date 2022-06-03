@@ -118,8 +118,9 @@ body{
 }
 
 .header-content-layout{
-	position: absolute;
-	bottom: 50px;
+	/*position: absolute;
+	bottom: 50px;*/
+	margin-top: 292px;
 }
 
 .custom-col-2{
@@ -170,5 +171,11 @@ body{
 	.bg-3 {
 	    height: 25vh;
 	    margin-top: -80px;
+	}
+	.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+	     display: contents; 
+	}
+	.header-content-layout {
+	    margin-top: 366px;
 	}
 }
