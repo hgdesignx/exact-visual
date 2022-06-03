@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+body{
+	font-family: 'Manrope', sans-serif;
+	color: #000;
+	overflow-x: hidden;
+	background: url(../imgs/chameleon2.png);
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+}
+
+.home-masthead{
+	background:url(../imgs/home-bg-2.png);
+	background-position: bottom;
+	background-size: cover;
+	height: 100vh;
+}
+.bg-1{
+	background: url(../imgs/green-abstract-bg.png);
+	background-size: cover;
+	background-position: top;
+	padding-bottom: 350px;
+}
+.bg-2{
+	background: url(../imgs/chameleon.png);
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	width: auto;
+	height: 180vh;
+	margin-top: -800px;
+}
+.bg-3{
+	background: url(../imgs/bg-3.png);
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	width: auto;
+	height: 100vh;
+	margin-top: -100px;
+}
+.bg-4{
+	background: url(../imgs/green-abstract-bg-cropped.png);
+	background-size: cover;
+	background-position: top;
+	/*padding-bottom: 200px;*/
+}
+.bg-5{
+	background: url(../imgs/chameleon2.png);
+	background-size: cover;
+	background-position: top;
+	padding-bottom: 200px;
+}
+.bg-transparent{
+	background: transparent;
+	margin-top: -300px;
+}
+.bg-mac{
+	background: url(../imgs/mac-bg.png);
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+.bg-footer{
+	background: url(../imgs/footer-bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: auto;
+	height: 100%;
+}
+.diamond-img{
+	width: 800px;
+}
+
+.bg-nav{
+	background: rgba(0,0,0,.5);
+}
+.nav-link{
+	color: white;
+}
+.nav-link:hover{
+	color: #8EC641;
+}
+.nav-link.active{
+	color: #8EC641 !important;
+}
+
+.heading-title{
+	font-size: 75px;
+	font-weight: 800;
+	letter-spacing: -5px;
+}
+.heading-subtitle{
+	font-size: 60px;
+	font-weight: 800;
+	letter-spacing: -3px;
+}
+.content-title{
+	font-size: 24px
+	font-weight:800;
+}
+.body-content{
+	font-size: 18px;
+	font-weight: 300;
+}
+.text-green{
+	color: #0C9548;
+}
+.text-lightgreen{
+	color: #8EC641;
+	font-weight: 800;
+}
+
+.approach-hover:hover{
+	border: 2px solid #0C9548;
+}
+
+.header-content-layout{
+	position: absolute;
+	bottom: 50px;
+}
+
+.custom-col-2{
+	margin-top: 100px;
+}
+.custom-col-3{
+	margin-top: 200px;
+}
+
+/*button*/
+.site-btn{
+	background: #158B43;
+	color: #fff;
+	border: none;
+	font-weight: 500;
+	padding: 20px 0;
+	width: 50%;
+}
+.site-btn:hover{
+	background: #8EC641;
+	color: #fff;
+	border: none;
+}
+
+@media (max-width: 768px){
+	.heading-title {
+	    font-size: 60px;
+	}
+	.site-btn {
+	    width: 100%;
+	}
+	.custom-col-2, .custom-col-3 {
+	    margin-top: 0px;
+	}
+	.bg-2 {
+	    height: 44vh;
+	    margin-top: -180px;
+	}
+	.bg-1 {
+	    padding-bottom: 0; 
+	}
+	.bg-transparent {
+	    margin-top: -69px;
+	}
+	.heading-subtitle {
+	    font-size: 40px;
+	}
+	.bg-3 {
+	    height: 25vh;
+	    margin-top: -80px;
+	}
+}
