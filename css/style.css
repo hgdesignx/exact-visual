@@ -4,78 +4,43 @@ body{
 	font-family: 'Manrope', sans-serif;
 	color: #000;
 	overflow-x: hidden;
-	background: url(../imgs/chameleon2.png);
-	background-size: cover;
-	background-attachment: fixed;
 	width: 100%;
 }
 
+/*backgrounds*/
 .home-masthead{
-	background:url(../imgs/home-bg-2.png);
+	background:url(../imgs/home-bg.png);
 	background-position: bottom;
 	background-size: cover;
-	height: 100vh;
+	height: 95vh;
 }
-.bg-1{
+.bg-abstract{
 	background: url(../imgs/green-abstract-bg.png);
 	background-size: cover;
-	background-position: top;
-	padding-bottom: 350px;
-}
-.bg-2{
-	background: url(../imgs/chameleon.png);
-	background-size: cover;
-	background-position: top;
-	background-repeat: no-repeat;
-	width: auto;
-	height: 180vh;
-	margin-top: -800px;
-}
-.bg-3{
-	background: url(../imgs/bg-3.png);
-	background-size: cover;
-	background-position: top;
-	background-repeat: no-repeat;
-	width: auto;
-	height: 100vh;
-	margin-top: -100px;
-}
-.bg-4{
-	background: url(../imgs/green-abstract-bg-cropped.png);
-	background-size: cover;
-	background-position: top;
-	/*padding-bottom: 200px;*/
-}
-.bg-5{
-	background: url(../imgs/chameleon2.png);
-	background-size: cover;
-	background-position: top;
-	padding-bottom: 200px;
+	background-position: center;
+	background-attachment: fixed;
 }
 .bg-transparent{
 	background: transparent;
 	margin-top: -300px;
 }
-.bg-mac{
-	background: url(../imgs/mac-bg.png);
+.bg-contact-us{
+	background: url(../imgs/contact-us-bg.png);
 	background-size: cover;
-	background-position: top;
-	background-repeat: no-repeat;
-	height: 100%;
+	background-position: center;
+	background-attachment: fixed;
 }
 .bg-footer{
-	background: url(../imgs/footer-bg.png);
+	background: #111111;
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: auto;
 	height: 100%;
 }
-.diamond-img{
-	width: 800px;
-}
 
+/*navbar menu*/
 .bg-nav{
-	background: rgba(0,0,0,.5);
+	background: #111111;
 }
 .nav-link{
 	color: white;
@@ -87,6 +52,7 @@ body{
 	color: #8EC641 !important;
 }
 
+/*custom texts*/
 .heading-title{
 	font-size: 75px;
 	font-weight: 800;
@@ -98,13 +64,15 @@ body{
 	letter-spacing: -3px;
 }
 .content-title{
-	font-size: 24px
+	font-size: 26px;
 	font-weight:800;
 }
 .body-content{
 	font-size: 18px;
 	font-weight: 300;
 }
+
+/*text colors*/
 .text-green{
 	color: #0C9548;
 }
@@ -113,31 +81,64 @@ body{
 	font-weight: 800;
 }
 
+/*approach style*/
 .approach-hover:hover{
 	border: 2px solid #0C9548;
 }
 
-.header-content-layout{
-	/*position: absolute;
-	bottom: 50px;*/
-	margin-top: 292px;
+/*services*/
+.service-container {
+  position: relative;
+  width: 100%;
+}
+.service-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(21,139,67,0.89);
+}
+.service-container:hover .overlay {
+  opacity: 1;
+}
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.services-margin-top{
+	margin-top: -150px;
 }
 
-.custom-col-2{
-	margin-top: 100px;
-}
-.custom-col-3{
-	margin-top: 200px;
+/* form */
+.custom-form{
+	background: #fff;
 }
 
-/*button*/
+/*buttons*/
 .site-btn{
 	background: #158B43;
 	color: #fff;
 	border: none;
 	font-weight: 500;
 	padding: 20px 0;
-	width: 50%;
+	width: 250px;
 }
 .site-btn:hover{
 	background: #8EC641;
@@ -145,6 +146,26 @@ body{
 	border: none;
 }
 
+.service-btn{
+	font-size: 18px;
+	font-weight:800;
+	color: #fff;
+	text-decoration: none;
+}
+.service-btn:hover{
+	color: #fff;
+	text-decoration: underline;
+}
+
+/*display*/
+.display-desktop{
+	display: block;
+}
+.display-mobile{
+	display: none;
+}
+
+/*media queries*/
 @media (max-width: 768px){
 	.heading-title {
 	    font-size: 60px;
@@ -177,5 +198,30 @@ body{
 	}
 	.header-content-layout {
 	    margin-top: 366px;
+	}
+	.carousel-item {
+	    text-align: center;
+	}
+	.display-desktop{
+		display: none;
+	}
+	.display-mobile{
+		display: block;
+	}
+	.masthead-mobile{
+		height: 100vh;
+	}
+	.homepage-chameleon-display{
+		position: absolute;
+		bottom: 0;
+	}
+	.services-margin-top {
+	    margin-top: -77px;
+	}
+	.row.mt-5 {
+	    margin-top: 22px !important;
+	}
+	.testimonial-mobile{
+		text-align: center;
 	}
 }
