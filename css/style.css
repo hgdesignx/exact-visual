@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
 body{
 	font-family: 'Manrope', sans-serif;
@@ -7,12 +8,22 @@ body{
 	width: 100%;
 }
 
+section > .container{
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
 /*backgrounds*/
 .home-masthead{
 	background:url(../imgs/home-bg.png);
 	background-position: bottom;
 	background-size: cover;
-	height: 95vh;
+	height: 100vh;
+}
+.about-masthead{
+	background:url(../imgs/bean-bg.png);
+	background-position: bottom;
+	background-size: cover;
+	height: 100%;
 }
 .bg-abstract{
 	background: url(../imgs/green-abstract-bg.png);
@@ -23,6 +34,16 @@ body{
 .bg-transparent{
 	background: transparent;
 	margin-top: -300px;
+}
+.bg-services{
+	background: url(../imgs/bg-services.png);
+	background-size: cover;
+	background-position: center;
+}
+.bg-creative-team{
+	background: url(../imgs/creative-team-bg.png);
+	background-size: cover;
+	background-position: top;
 }
 .bg-contact-us{
 	background: url(../imgs/contact-us-bg.png);
@@ -39,22 +60,34 @@ body{
 }
 
 /*navbar menu*/
-.bg-nav{
-	background: #111111;
+.logo{
+	max-width: 270px;
 }
-.nav-link{
-	color: white;
+li a:hover {
+    color: #111;
 }
-.nav-link:hover{
-	color: #8EC641;
+li a {
+    color: #111 !important;
 }
-.nav-link.active{
-	color: #8EC641 !important;
+.nav-link {
+    padding: 0 0 .2rem;
 }
+#nav-menu {
+    font-size: medium;
+    position: relative;
+}
+main-nav{
+	background: transparent;
+	transition: background 0.3s;
+}
+.scrolled #main-nav {
+	background: #fff;
+}
+
 
 /*custom texts*/
 .heading-title{
-	font-size: 75px;
+	font-size: 80px;
 	font-weight: 800;
 	letter-spacing: -5px;
 }
@@ -81,9 +114,38 @@ body{
 	font-weight: 800;
 }
 
+/*creative team*/
+div>.creative-team{
+	height: 70vh;
+}
+div>.creative-team:hover{
+	margin-top: -40px;
+	transition: 1s;
+}
+.team-1{
+	background:linear-gradient(to bottom,rgba(0,0,0,0.8) 100%,rgba(0,0,0,0.3) 50%),url(../imgs/team-1.png);
+	background-size: cover;
+	background-position: left;
+}
+.team-2{
+	background:linear-gradient(rgba(12,149,72,0.8),rgba(255,193,7,0.8)),url(../imgs/team-2.png);
+	background-size: cover;
+	background-position: center;
+}
+.team-3{
+	background:linear-gradient(to bottom,rgba(0,0,0,0.8) 100%,rgba(0,0,0,0.3) 50%),url(../imgs/team-3.png);
+	background-size: cover;
+	background-position: center;
+}
+.team-4{
+	background:linear-gradient(rgba(12,149,72,0.8),rgba(255,193,7,0.8)),url(../imgs/team-4.png);
+	background-size: cover;
+	background-position: center;
+}
 /*approach style*/
 .approach-hover:hover{
 	border: 2px solid #0C9548;
+	transition: .1s;
 }
 
 /*services*/
@@ -157,6 +219,19 @@ body{
 	text-decoration: underline;
 }
 
+/*footer*/
+.footer-links>a{
+	color: #fff;
+	text-decoration: none;
+}
+.footer-links>a:hover{
+	color: #8EC641;
+	text-decoration: none;
+}
+.copyright{
+	font-size: 13px;
+}
+
 /*display*/
 .display-desktop{
 	display: block;
@@ -168,7 +243,7 @@ body{
 /*media queries*/
 @media (max-width: 768px){
 	.heading-title {
-	    font-size: 60px;
+	    font-size: 47px;
 	}
 	.site-btn {
 	    width: 100%;
@@ -209,11 +284,7 @@ body{
 		display: block;
 	}
 	.masthead-mobile{
-		height: 100vh;
-	}
-	.homepage-chameleon-display{
-		position: absolute;
-		bottom: 0;
+		height: 100%;
 	}
 	.services-margin-top {
 	    margin-top: -77px;
@@ -224,4 +295,183 @@ body{
 	.testimonial-mobile{
 		text-align: center;
 	}
+	.bg-creative-team>div>.row{
+		padding: 20px;
+	}
+	div>.creative-team {
+	    height: 100%;
+	}
+	.logo {
+	    max-width: 224px;
+	    margin-left: 10px;
+	}
+	section > .container {
+	    padding-top: 30px;
+	    padding-bottom: 30px;
+	}
+	.footer-logo{
+		width: 100%;
+	}
+	.footer-mt{
+		margin-top: 25px;
+	}
+}
+
+
+/* Animista */
+.heartbeat {
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
+}
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+.wobble-hor-bottom {
+	-webkit-animation: wobble-hor-bottom 4s infinite both;
+	        animation: wobble-hor-bottom 4s infinite both;
+}
+@-webkit-keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+            transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+            transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+.color-change-2x {
+	-webkit-animation: color-change-2x 2s linear infinite alternate both;
+	        animation: color-change-2x 2s linear infinite alternate both;
+}
+@-webkit-keyframes color-change-2x {
+  0% {
+    background: #fff;
+  }
+  100% {
+    background: #8EC641;
+  }
+}
+@keyframes color-change-2x {
+  0% {
+    background: #fff;
+  }
+  100% {
+    background: #8EC641;
+  }
 }
